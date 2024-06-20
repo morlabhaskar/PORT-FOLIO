@@ -12,10 +12,10 @@ body {
 }
 .secondary-button:hover{
   color: #fff;
-  background-color: #028ac9;
+  background-color: #1e82b0;
 }
 .subtitle {
-  color: #028ac9;
+  color: #ce7c1e;
 }
 .subtitle::before{
   background-color: #028ac9;
