@@ -94,7 +94,7 @@ a,a:hover,button {
   position: relative;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  font-size: 28px;
+  font-size: 15px;
   font-weight: 400;
 }
 .subtitle::before{
@@ -759,9 +759,18 @@ header .navbar-brand b {
   margin-bottom: 0 !important;
 }
 .resume .timeline-year {
-  font-size: 15px;
+  /* font-size: 15px; */
   font-weight: 400;
   margin-bottom: 0.25rem;
+}
+.timeline-title {
+  color:rgb(21, 114, 154)
+}
+.timeline-title1 {
+  color:rgb(156, 140, 240)
+}
+.timeline-title2 {
+  color:rgb(21, 114, 154)
 }
 /*------------------------- Testimonial -------------------------*/
 .testimonial-item {
