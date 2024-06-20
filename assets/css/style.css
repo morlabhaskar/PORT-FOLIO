@@ -876,6 +876,20 @@ header .navbar-brand b {
 .portfolio-filter .list-inline-item:not(:last-child) {
   margin-right: 1rem;
 }
+.port-folio-button {
+  background-color: #028ac9;
+  padding: 3px 10px;
+  border-radius: 9px;
+  border: none;
+}
+.port-folio-button a {
+  text-decoration: none;
+
+}
+.port-folio-button p {
+  color: black;
+}
+
 /*------------------------- Blog -------------------------*/
 .blog .blog-image {
   overflow: hidden;
@@ -2109,7 +2123,7 @@ body.dark-arshia , .dark-arshia .ajax-page-content{
 .dark-arshia .text-muted{
   color: #cbccce !important;  
 }
-.dark-arshia .portfolio .portfolio-content h6 ,.dark-arshia .blog-header , .dark-arshia .primary-button ,
+.dark-arshia .portfolio h6 ,.dark-arshia .blog-header , .dark-arshia .primary-button ,
  .dark-arshia .primary-button:hover{
   color: #fff;
 }

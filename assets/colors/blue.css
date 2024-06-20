@@ -168,9 +168,9 @@ header, .right-side {
 .portfolio .portfolio-image::before {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.portfolio .portfolio-content p{
+/* .portfolio .portfolio-content p{
   color: #028ac9;
-}
+} */
 /*------------------------- BLOG -------------------------*/
 .blog-icon{
   background-color: rgba(0, 0, 0, 0.4);
