@@ -651,6 +651,10 @@ header .navbar-brand b {
   font-size: 10px;
   margin-bottom: 4px;
 }
+.skills .skillbar-title .logo-img {
+  margin-right: 7px;
+  border-radius: 3px;
+}
 .skills .skillbar-bar {
   border-radius: 6px;
   height: 8px;
