@@ -124,6 +124,9 @@ header, .right-side {
 .language-skill ul li i{
   color: #028ac9;
 }
+.lan {
+  color: #028ac9;
+}
 /*------------------------- Services -------------------------*/
 .boxes [class^="col-"]:nth-child(2n)::after{
   background: linear-gradient(to right, #028ac9, rgba(185, 143, 95, 0.15));
