@@ -563,16 +563,16 @@ header .navbar-brand b {
   width: 300px;
 }
 /*------------------------- About -------------------------*/
-/* .about-img{
+ /* .about-img{
   position: relative;
-  background-color: #76f457;
+  background-color: #d17a7a;
 }
 .about-img img {
   width: 90%;
   border-radius: 32px 32px 0;
   z-index: 2;
   position: relative;
-  top: 16px;
+  top: 0px;
 }
 .border-img{
   width: 75%;
@@ -581,6 +581,7 @@ header .navbar-brand b {
   top: 0;
   border-radius: 32px 32px 0;
   right: 1rem;
+  background-color: #d4f1ae;
 } */
 
 
@@ -589,13 +590,14 @@ header .navbar-brand b {
   position: relative;
 }
 .about-img img {
-  width: 90%;
+  width: 75%;
   border-radius: 32px 32px 0;
   z-index: 2;
   position: relative;
   /* top: 16px; */
-  bottom: 0;
+  bottom: 0px;
   left: 0.8rem;
+  /* background-color: #d4f1ae; */
 }
 .border-img{
   width: 75%;
@@ -603,7 +605,8 @@ header .navbar-brand b {
   position: absolute;
   top: 0;
   border-radius: 32px 32px 0;
-  right: 4rem;
+  left: 0.8rem;
+  /* right: 4rem; */
 }
 
 
