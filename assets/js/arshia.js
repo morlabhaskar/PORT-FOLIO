@@ -22,6 +22,7 @@ $(document).ready(function() {
     calculateExperience("2026-03-23", null, "iet-exp");
     calculateExperience("2025-07-04", "2026-02-28", "vector-exp");
     calculateExperience("2025-07-04", "2026-02-28", "ncr-exp");
+    calculateAge("2004-07-12");
     mobileDesign();
     portfolioPopup();
     sidebarMenu();
@@ -177,6 +178,22 @@ function calculateExperience(startDate, endDate, elementId) {
 
     document.getElementById(elementId).innerHTML = experience;
 }
+
+function calculateAge(dob) {
+    var birthDate = new Date(dob);
+    var today = new Date();
+
+    var age = today.getFullYear() - birthDate.getFullYear();
+
+    var month = today.getMonth() - birthDate.getMonth();
+
+    if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    $("#age").html(age);
+}
+
 /*-------------------------  Preloader  -------------------------*/
 function pagePreloader() {
 
