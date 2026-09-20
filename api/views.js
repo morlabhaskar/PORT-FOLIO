@@ -1,35 +1,49 @@
 export default async function handler(req, res) {
     try {
-        const response = await fetch(
-            "https://api.vercel.com/v1/query/web-analytics/visits/count?" +
-            new URLSearchParams({
-                projectId: process.env.VERCEL_PROJECT_ID,
-                teamId: process.env.VERCEL_TEAM_ID,
-                filter: "requestPath eq '/'"
-            }),
-            {
-                headers: {
-                    Authorization: `Bearer ${process.env.VERCEL_TOKEN}`
-                }
-            }
+        const token = process.env.VERCEL_TOKEN;
+        const projectId = process.env.VERCEL_PROJECT_ID;
+        const teamId = process.env.VERCEL_TEAM_ID;
+
+        if (!token || !projectId) {
+            return res.status(500).json({
+                views: 0,
+                error: "Missing Vercel environment variables"
+            });
+        }
+
+        const url = new URL(
+            "https://api.vercel.com/v1/query/web-analytics/visits/count"
         );
 
-        if (!response.ok) {
-            throw new Error("Vercel Analytics API failed");
+        url.searchParams.set("projectId", projectId);
+
+        if (teamId) {
+            url.searchParams.set("teamId", teamId);
         }
+
+        const response = await fetch(url, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
 
         const data = await response.json();
 
-        res.status(200).json({
-            views: data.result
+        if (!response.ok) {
+            return res.status(response.status).json({
+                views: 0,
+                error: data
+            });
+        }
+
+        return res.status(200).json({
+            views: data.count ?? data.visits ?? 0
         });
 
     } catch (error) {
-        console.error(error);
-
-        res.status(500).json({
+        return res.status(500).json({
             views: 0,
-            error: "Unable to fetch views"
+            error: error.message
         });
     }
 }
