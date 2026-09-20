@@ -555,10 +555,11 @@ header .navbar-brand b {
   padding: 10px 30px; 
 }
 .extend-icon{
+  border-radius: 20px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right:2rem;
+  right:3rem;
   height: 300px;
   width: 300px;
 }

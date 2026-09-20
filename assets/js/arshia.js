@@ -18,7 +18,11 @@ $(document).ready(function() {
     "use strict";
     deviceScreen();
     date();
-    mobileDesign()
+    calculateExperience("2026-03-25", null, "valeo-exp");
+    calculateExperience("2026-03-23", null, "iet-exp");
+    calculateExperience("2025-07-04", "2026-02-28", "vector-exp");
+    calculateExperience("2025-07-04", "2026-02-28", "ncr-exp");
+    mobileDesign();
     portfolioPopup();
     sidebarMenu();
     mapInit();
@@ -134,6 +138,45 @@ function date() {
     $('#date').html('<span><b>' + newDate.getDate() + '</b></span>' + '<span>' + monthNames[newDate.getMonth()] + '</span> ' + newDate.getFullYear());
 }
 
+function calculateExperience(startDate, endDate, elementId) {
+
+    var start = new Date(startDate);
+
+    // If endDate is null, use today's date
+    var end = endDate ? new Date(endDate) : new Date();
+
+    var years = end.getFullYear() - start.getFullYear();
+    var months = end.getMonth() - start.getMonth();
+
+    if (end.getDate() < start.getDate()) {
+        months--;
+    }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    var experience = "";
+
+    if (years > 0) {
+        experience += years + (years === 1 ? " Year" : " Years");
+    }
+
+    if (months > 0) {
+        if (experience !== "") {
+            experience += " ";
+        }
+
+        experience += months + (months === 1 ? " Month" : " Months");
+    }
+
+    if (experience === "") {
+        experience = "0 Months";
+    }
+
+    document.getElementById(elementId).innerHTML = experience;
+}
 /*-------------------------  Preloader  -------------------------*/
 function pagePreloader() {
 
