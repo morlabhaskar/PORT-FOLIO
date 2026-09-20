@@ -23,6 +23,7 @@ $(document).ready(function() {
     calculateExperience("2025-07-04", "2026-02-28", "vector-exp");
     calculateExperience("2025-07-04", "2026-02-28", "ncr-exp");
     calculateAge("2004-07-12");
+    loadProfileViews();
     mobileDesign();
     portfolioPopup();
     sidebarMenu();
@@ -192,6 +193,30 @@ function calculateAge(dob) {
     }
 
     $("#age").html(age);
+}
+
+function loadProfileViews() {
+
+    fetch("/api/views")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+
+            if (data.views !== undefined) {
+                document.getElementById("profile-views").textContent =
+                    data.views.toLocaleString();
+            } else {
+                document.getElementById("profile-views").textContent = "0";
+            }
+
+        })
+        .catch(function(error) {
+
+            console.error("Error loading profile views:", error);
+
+            document.getElementById("profile-views").textContent = "0";
+        });
 }
 
 /*-------------------------  Preloader  -------------------------*/
