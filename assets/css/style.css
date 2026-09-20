@@ -851,78 +851,7 @@ header .navbar-brand b {
 
 
 /*-----------------------Premium Image-------------------------*/
-.premium-image {
-    position: relative;
-    display: inline-block;
 
-    padding: 4px;
-
-    border-radius: 24px;
-
-    background: linear-gradient(
-        135deg,
-        rgba(20, 157, 221, 0.8),
-        rgba(20, 157, 221, 0.15),
-        rgba(255, 255, 255, 0.8)
-    );
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.12),
-        0 5px 15px rgba(20, 157, 221, 0.08);
-
-    transition: all 0.4s ease;
-}
-
-.premium-image::before {
-    content: "";
-
-    position: absolute;
-    inset: 15px;
-
-    border-radius: 25px;
-
-    background: #149ddd;
-
-    filter: blur(35px);
-
-    opacity: 0.10;
-
-    z-index: -1;
-
-    transition: opacity 0.4s ease;
-}
-
-.premium-image .extend-icon {
-    display: block;
-
-    max-width: 430px;
-    width: 100%;
-    height: auto;
-
-    border-radius: 20px;
-
-    border: none;
-
-    object-fit: cover;
-
-    transition: transform 0.5s ease;
-}
-
-.premium-image:hover {
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 22px 45px rgba(0, 0, 0, 0.16),
-        0 8px 25px rgba(20, 157, 221, 0.20);
-}
-
-.premium-image:hover::before {
-    opacity: 0.22;
-}
-
-.premium-image:hover .extend-icon {
-    transform: scale(1.015);
-}
 /*----------------------------------------------------*/
 
 /*------------------------- About -------------------------*/
@@ -2151,11 +2080,11 @@ textarea:-moz-placeholder {
     padding-top: 40px;
   }
 }
-@media (max-width: 1230px) {
+/* @media (max-width: 1230px) {
   .extend-icon{
     display: none;
   }
-}
+} */
 @media (max-width: 991px) {
   .color-switcher .pallet-button{
     right: 20px;
