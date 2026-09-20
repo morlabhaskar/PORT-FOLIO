@@ -534,30 +534,20 @@ header .navbar-brand b {
 .hero .mCSB_container {
   overflow: initial;
 }
-
-/*--------Profile Views----------*/
-
 .profile-views {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-
     margin-top: 15px;
     padding: 6px 12px;
-
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.2px;
-
     color: #555;
-
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50px;
-
     background: rgba(255, 255, 255, 0.6);
-
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-
     transition: all 0.3s ease;
 }
 
@@ -608,61 +598,34 @@ header .navbar-brand b {
   height: 300px;
   width: 300px;
 }
-
-/*----------------------------------------------------*/
-
 /*------------------------Experience----------------------------*/
 
-/* =========================================
-   EXPERIENCE - ONE ORGANISATION PER ROW
-========================================= */
 
 .experience-list {
-    width: 100%;
+  width: 100%;
 }
-
-
-/* Remove old middle vertical timeline */
 
 .experience-list::before,
 .experience-list::after {
     display: none !important;
 }
 
-
-/* Each organisation */
-
 .experience-item {
     position: relative;
-
     width: 100%;
-
-    padding: 10px 1px;
-
+    padding: 1px 1px;
     border-left: none !important;
     border-right: none !important;
-
-    /* border-top: none !important;
-    border-bottom: 1px solid #ddd !important; */
-
     box-sizing: border-box;
 }
-
-
-/* hr */
-
 .premium-line {
     display: block;
     width: 100%;
     height: 3px;
-
-    margin: 15px 0;
-
+    margin: 7px 0;
     border: 0;
     opacity: 1;
-
     border-radius: 10px;
-
     background: linear-gradient(
         90deg,
         #149ddd 0%,
@@ -674,150 +637,85 @@ header .navbar-brand b {
     box-shadow: 0 2px 8px rgba(20, 157, 221, 0.18);
 }
 
-/* Header */
-
 .experience-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 100%;
 }
-
-
-/* Organisation + logo */
-
 .experience-company {
     display: flex;
     align-items: top;
 
     gap: 15px;
 }
-
-
-/* Logo */
-
 .experience-company .logo-img {
     object-fit: contain;
     flex-shrink: 0;
 }
-
-
-/* Date */
-
 .experience-header .timeline-year {
     margin: 0;
-
     white-space: nowrap;
 
     text-align: right;
 }
-
-
-/* =========================================
-   POSITION / PROMOTION TIMELINE
-========================================= */
 
 .promotion-timeline {
     position: relative;
 
     margin-left: 70px;
 
-    margin-top: 20px;
+    margin-top: 2px;
 
     padding-left: 30px;
 }
 
-
-/* Vertical line only for promotions */
-
 .promotion-timeline::before {
     content: "";
-
     position: absolute;
-
     left: 5px;
-
     top: 5px;
     bottom: 5px;
-
     width: 1px;
-
     background: #b8ddea;
 }
 
-
-/* Position */
-
 .promotion-item {
     position: relative;
-
     display: flex;
-
     min-height: 40px;
-
     margin-bottom: 18px;
 }
-
-
-/* Last position */
 
 .promotion-item:last-child {
     margin-bottom: 0;
 }
 
-
-/* Bullet */
-
 .promotion-dot {
     position: absolute;
-
     left: -30px;
-
     top: 4px;
-
     width: 10px;
     height: 10px;
-
     border: 2px solid #149ddd;
-
     border-radius: 50%;
-
     background: #fff;
-
     box-sizing: border-box;
-
     z-index: 2;
 }
 
-
-/* Promotion title */
-
 .promotion-content h6 {
     margin: 0 0 4px;
-
     font-size: 16px;
-
     font-weight: 600;
-
     color: #0879b9;
 }
 
-
-/* Promotion date */
-
 .promotion-content p {
     margin: 0;
-
     font-size: 14px;
-
     color: #777;
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 767px) {
 
@@ -827,17 +725,13 @@ header .navbar-brand b {
 
     .experience-header {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 10px;
     }
 
     .experience-header .timeline-year {
         text-align: left;
-
         white-space: normal;
-
         margin-left: 55px;
     }
 
@@ -846,15 +740,6 @@ header .navbar-brand b {
     }
 
 }
-
-/*----------------------------------------------------*/
-
-
-/*-----------------------Premium Image-------------------------*/
-
-/*----------------------------------------------------*/
-
-/*------------------------- About -------------------------*/
 
 .about-img {
   position: relative;
@@ -872,13 +757,6 @@ header .navbar-brand b {
   z-index: 0;
 }
 
-/* .left-side-image img {
-    border: 3px solid #149ddd;
-    border-radius: 50%;
-    box-shadow:
-        0 0 0 6px rgba(255, 255, 255, 0.08),
-        0 15px 35px rgba(0, 0, 0, 0.2);
-} */
 
 .left-side-image {
     position: relative;
@@ -890,12 +768,7 @@ header .navbar-brand b {
     content: "";
     position: absolute;
     inset: -12px;
-
     border-radius: 50%;
-
-    /* border: 2px solid #149ddd; */
-
-    /* Bubbles/dots around the ring */
     background:
         radial-gradient(circle at 12% 25%, #149ddd 0 3px, transparent 4px),
         radial-gradient(circle at 88% 20%, #149ddd 0 2px, transparent 3px),
@@ -907,14 +780,11 @@ header .navbar-brand b {
     z-index: 0;
 }
 
-/* Image */
 .left-side-image img {
     position: relative;
     z-index: 2;
-
     border: 3px solid #149ddd;
     border-radius: 50%;
-
     box-shadow:
         0 0 0 5px rgba(20, 157, 221, 0.12),
         0 0 25px rgba(20, 157, 221, 0.18),
@@ -925,15 +795,11 @@ header .navbar-brand b {
     content: "";
     position: absolute;
     inset: -6px;
-
     border-radius: 50%;
-
     border: 1px dashed rgba(20, 157, 221, 0.5);
-
     z-index: 0;
 }
 
-/* Soft glow */
 .about-img::after {
   content: "";
   position: absolute;
@@ -952,28 +818,20 @@ header .navbar-brand b {
   display: block;
   position: relative;
   z-index: 2;
-
   border-radius: 32px 32px 0 32px;
-
-  /* Premium depth */
   box-shadow:
     0 20px 45px rgba(0, 0, 0, 0.25),
     0 8px 18px rgba(0, 0, 0, 0.15);
 
-  /* subtle border */
   border: 2px solid rgba(255, 255, 255, 0.35);
-
   left: 0.8rem;
-
   transition:
     transform 0.45s ease,
     box-shadow 0.45s ease;
 }
 
-/* Hover effect */
 .about-img:hover img {
   transform: translateY(-8px) scale(1.015);
-
   box-shadow:
     0 30px 60px rgba(0, 0, 0, 0.30),
     0 12px 25px rgba(0, 0, 0, 0.18);
@@ -1778,25 +1636,7 @@ textarea:-moz-placeholder {
   left: 50%;
   transform: translate(-50% , -50%);
 }
-/* .blog-single-page .right-side .social-box{
-  top: 57%;
-} */
-/* .blog-single-page .left-side{
-  width: 80px !important;
-}
-.blog-single-page .left-side{
-  width: 80px !important;
-}
-.blog-single-page .left-side img {
-  width: 60px !important;
-} */
 
-/*------------------------- Background Animation -------------------------*/
-/* .area{
-  width: 100%;
-  height:100vh;
-  z-index: -1;
-} */
 .circles{
   position: absolute;
   top: 0;
@@ -2154,11 +1994,6 @@ textarea:-moz-placeholder {
     padding-top: 40px;
   }
 }
-/* @media (max-width: 1230px) {
-  .extend-icon{
-    display: none;
-  }
-} */
 @media (max-width: 991px) {
   .color-switcher .pallet-button{
     right: 20px;
@@ -2201,9 +2036,6 @@ textarea:-moz-placeholder {
     width: inherit;
     height: 63%;
  }
- /* .menu a.active {
-    color: #c16926;
- } */
  .menu li a i {
     transform: translateY(-15%);
  }
@@ -2475,13 +2307,9 @@ textarea:-moz-placeholder {
 .skills #skills{
   padding-left: 30px;
 }
-
 }
 
 @media (max-width: 575px) {
-  /* .menu-toggle {
-    border-radius: 16px;
- } */
   .blog-single .comments ul {
     margin-left: 30px;
  }
@@ -2563,7 +2391,3 @@ body.dark-arshia , .dark-arshia .ajax-page-content{
   border-bottom: 1px solid #cbccce;
   border-radius: 0;
 }
-/* .cf-count-item{
-  background-color: #6F97F7;
-  padding: 20px 0;
-} */
