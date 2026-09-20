@@ -519,6 +519,7 @@ header .navbar-brand b {
   position: relative;
   z-index: 1;
   overflow: none;
+  background-color: #1ab394;
 }
 .hero .hero-center {
   position: relative;
@@ -2456,7 +2457,27 @@ textarea:-moz-placeholder {
 .boxes [class^="col-"]:last-child::after{
   display: none !important;
 }
+.menu-align{
+  padding-top: 20px;
 }
+.extend-icon{
+  margin-top: 120px;
+  margin-right: 40px;
+  height: 200px;
+  width: 200px;
+}
+.profile-views{
+  margin-left: 110px;
+}
+.about-img img{
+  margin-left: 32px;
+}
+.skills #skills{
+  padding-left: 30px;
+}
+
+}
+
 @media (max-width: 575px) {
   /* .menu-toggle {
     border-radius: 16px;
