@@ -199,14 +199,22 @@ function loadProfileViews() {
 
     fetch("/api/views")
         .then(function(response) {
+
+            if (!response.ok) {
+                throw new Error("API request failed");
+            }
+
             return response.json();
         })
         .then(function(data) {
 
-            if (data.views !== undefined) {
+            if (typeof data.views === "number") {
+
                 document.getElementById("profile-views").textContent =
                     data.views.toLocaleString();
+
             } else {
+
                 document.getElementById("profile-views").textContent = "0";
             }
 

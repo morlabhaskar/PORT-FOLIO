@@ -17,9 +17,16 @@ export default async function handler(req, res) {
 
         url.searchParams.set("projectId", projectId);
 
+        // Only needed if this is a team project
         if (teamId) {
             url.searchParams.set("teamId", teamId);
         }
+
+        // Count only your homepage
+        url.searchParams.set(
+            "filter",
+            "requestPath eq '/'"
+        );
 
         const response = await fetch(url, {
             headers: {
@@ -37,7 +44,7 @@ export default async function handler(req, res) {
         }
 
         return res.status(200).json({
-            views: data.count ?? data.visits ?? 0
+            views: data.data?.pageviews ?? 0
         });
 
     } catch (error) {
