@@ -2282,31 +2282,238 @@ textarea:-moz-placeholder {
 @media (max-width: 767px) {
   .mCSB_scrollTools {
     right: 5px;
- }
- .boxes [class^="col-"]::after{
-  display: initial !important;
-}
-.boxes [class^="col-"]:last-child::after{
-  display: none !important;
-}
-.menu-align{
-  padding-top: 20px;
-}
-.extend-icon{
-  margin-top: 120px;
-  margin-right: 20px;
-  height: 220px;
-  width: 220px;
-}
-.profile-views{
-  margin-left: 92px;
-}
-.about-img img{
-  margin-left: 32px;
-}
-.skills #skills{
-  padding-left: 30px;
-}
+  }
+  .boxes [class^="col-"]::after{
+    display: initial !important;
+  }
+  .boxes [class^="col-"]:last-child::after{
+    display: none !important;
+  }
+  .menu-align{
+    padding-top: 20px;
+  }
+  .extend-icon{
+    margin-top: 120px;
+    margin-right: 20px;
+    height: 220px;
+    width: 220px;
+  }
+  .profile-views{
+    margin-left: 92px;
+  }
+  .about-img img{
+    margin-left: 32px;
+  }
+  .skills #skills{
+    padding-left: 30px;
+  }
+  .about-boxes{
+    /* background-color: #0cc0de; */
+  }
+  .about-description{
+    /* background-color: red; */
+  }
+  .personal-info{
+    /* background-color: #9370db; */
+  }
+  /* about */
+  .about-description {
+    position: relative;
+    padding: 28px 22px;
+    margin: 15px 0;
+    border-radius: 24px;
+    background: rgba(89, 223, 236, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow:
+      0 15px 40px rgba(21, 70, 103, 0.18),
+      inset 0 1px 0 rgba(37, 127, 152, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+  }
+  .about-description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 22px;
+    width: 70px;
+    height: 3px;
+    border-radius: 50px;
+    background: linear-gradient(
+      90deg,
+      #53df30,
+      #6dd5fa,
+      transparent
+    );
+    box-shadow: 0 0 14px rgba(1, 26, 39, 0.6);
+  }
+  .about-description::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    right: -70px;
+    bottom: -70px;
+    background: rgba(64, 196, 253, 0.1);
+    border-radius: 50%;
+    filter: blur(25px);
+    pointer-events: none;
+  }
+  .about-description h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px !important;
+    font-size: 21px;
+    line-height: 1.45;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color: #21769a;
+  }
+  .about-description h3::after {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 2px;
+    margin-top: 6px;
+    border-radius: 10px;
+    background: #c09c0d;
+    box-shadow: 0 0 10px rgba(20, 157, 221, 0.5);
+  }
+  .about-text {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.15px;
+    color: rgba(10, 6, 6, 0.78);
+    text-align: left;
+  }
+  /* personal info */
+  .personal-info {
+    position: relative;
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+  }
+  .personal-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 45px;
+    height: 3px;
+    border-radius: 20px;
+    background: linear-gradient(
+      90deg,
+      #53df30,
+      #6dd5fa,
+      transparent
+    );
+    box-shadow: 0 0 12px rgba(20, 157, 221, 0.65);
+  }
+  .personal-info li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(0, 11, 4, 0.6);
+  }
+  .personal-info li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+  .personal-info li small {
+    display: block;
+    max-width: 60%;
+    text-align: right;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(37, 201, 125, 0.92);
+    font-weight: 500;
+  }
+
+  /* skills */
+  .skills {
+    margin-top: 35px !important;
+  }
+  .skills > .col-lg-3 {
+    margin-bottom: 30px;
+  }
+  .skills #skills {
+    position: relative;
+    padding: 10px 14px;
+    background: #fefefe;
+    border: 1px solid #e8edf1;
+    border-radius: 18px;
+    box-shadow:
+      0 8px 25px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+  }
+  .skills .skill-box {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none;
+  }
+  .skills .skill-box .about-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 8px 8px 27px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #444;
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease,
+      background 0.25s ease;
+  }
+  .skills .skill-box .about-text::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #149ddd;
+    box-shadow:
+      0 0 0 3px rgba(20, 157, 221, 0.10);
+  }
+  .skills .skill-box:not(:last-child) .about-text::after {
+    content: "";
+    position: absolute;
+    left: 27px;
+    right: 4px;
+    bottom: 0;
+    height: 1px;
+    background: #edf0f2;
+  }
+  .skills .skill-box .about-text:hover {
+    color: #149ddd;
+    transform: translateX(4px);
+    background: rgba(20, 157, 221, 0.045);
+    border-radius: 8px;
+  }
 }
 
 @media (max-width: 575px) {
