@@ -23,7 +23,7 @@ $(document).ready(function() {
     calculateExperience("2025-07-04", "2026-02-28", "vector-exp");
     calculateExperience("2025-07-04", "2026-02-28", "ncr-exp");
     calculateAge("2004-07-12");
-    // loadProfileViews();
+    loadProfileViews();
     mobileDesign();
     portfolioPopup();
     sidebarMenu();
