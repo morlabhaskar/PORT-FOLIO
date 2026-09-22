@@ -124,10 +124,10 @@ header, .right-side {
 }
 /*------------------------- Services -------------------------*/
 .boxes [class^="col-"]:nth-child(2n)::after{
-  background: linear-gradient(to right, #dba423, rgba(185, 143, 95, 0.15));
+  /* background: linear-gradient(to right, #dba423, rgba(185, 143, 95, 0.15)); */
 }
 .boxes [class^="col-"]:nth-child(2n+1):after{
-  background: linear-gradient(to right, rgba(185, 143, 95, 0.15), #dba423);
+  /* background: linear-gradient(to right, rgba(185, 143, 95, 0.15), #dba423); */
 }
 .services-description {
   color: #595959;
