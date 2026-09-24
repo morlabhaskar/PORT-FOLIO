@@ -21,7 +21,7 @@ $(document).ready(function() {
     calculateExperience("2026-03-25", null, "valeo-exp");
     calculateExperience("2026-03-23", null, "iet-exp");
     calculateExperience("2025-07-04", "2026-02-28", "vector-exp");
-    calculateExperience("2025-07-04", "2026-02-28", "ncr-exp");
+    calculateExperience("2025-01-01", "2025-03-01", "ncr-exp");
     calculateAge("2004-07-12");
     loadProfileViews();
     mobileDesign();
