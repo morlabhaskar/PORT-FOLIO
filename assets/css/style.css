@@ -3320,7 +3320,7 @@ textarea:-moz-placeholder {
       line-height: 1.55;
     }
     #resume .vertical-line>.col-md-6:last-child {
-      display: none;
+      /* display: none; */
     }
     #resume .timeline-box:hover {
       transform: translateY(-4px);
